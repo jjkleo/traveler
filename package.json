@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "cross-env NODE_ENV=dev webpack serve --config webpack.dev.js",
+    "dev": "cross-env NODE_ENV=dev webpack serve --config webpack.dev.js",
     "build": "cross-env NODE_ENV=prod webpack --config webpack.prod.js"
   },
   "author": "",
@@ -46,6 +46,9 @@
     "webpack-merge": "^5.4.1"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.32",
+    "@fortawesome/free-solid-svg-icons": "^5.15.1",
+    "@fortawesome/vue-fontawesome": "^2.0.0",
     "element-ui": "^2.14.1",
     "vue": "^2.6.12",
     "vue-router": "^3.4.9",
