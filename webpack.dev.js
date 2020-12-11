@@ -9,7 +9,11 @@ module.exports = merge(common, {
     host: "127.0.0.1",
     port: 4200,
     open: true,
-    compress: true
+    compress: true,
+    historyApiFallback: true,
+    headers: {
+      "Access-Control-Allow-Origin": "*"
+    }
     // static: "./src/assets"
   }
 });
