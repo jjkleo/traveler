@@ -1,7 +1,6 @@
 <template>
   <div>
     <HeaderTop />
-    <main>Home</main>
   </div>
 </template>
 
@@ -10,15 +9,9 @@
 import HeaderTop from "@/components/HeaderTop.vue";
 
 export default {
-  name: "Home",
+  name: "Resource",
   components: {
     HeaderTop
   }
 };
 </script>
-
-<style scoped>
-main {
-  height: 100px;
-}
-</style>

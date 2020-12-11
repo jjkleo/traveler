@@ -1,9 +1,27 @@
-$body-color: red;
+/**
+* 全局设置
+*
+*/
 
-body {
-  color: $body-color;
+* {
+  margin: 0;
+  padding: 0;
 }
 
-::placeholder {
-  color: gray;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul,
+ol {
+  list-style: none;
 }
