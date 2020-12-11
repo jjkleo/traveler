@@ -36,7 +36,8 @@ module.exports = {
   },
   output: {
     filename: "[name].bundle.js",
-    path: path.resolve(__dirname, "dist")
+    path: path.resolve(__dirname, "dist"),
+    publicPath: "/" // 生产环境需要更改publicPath
   },
   module: {
     rules: [
@@ -51,24 +52,35 @@ module.exports = {
         loader: "babel-loader"
       },
       {
-        test: /.css$/,
+        test: /\.(sass|scss|css)$/i,
         use: [
           devMode ? "style-loader" : MiniCssExtractPlugin.loader,
+          "css-loader",
+          "postcss-loader",
           {
-            loader: "css-loader",
+            loader: "sass-loader",
             options: {
-              sourceMap: true
+              // Prefer `dart-sass`
+              implementation: require("sass")
             }
           }
         ]
       },
       {
         test: /\.(png|svg|jpg|jpeg|gif)$/i,
-        type: "asset/resource"
+        use: [
+          {
+            loader: "url-loader",
+            options: {
+              limit: 8192,
+              esModule: false
+            }
+          }
+        ]
       },
       {
         test: /\.(woff|woff2|eot|ttf|otf)$/i,
-        type: "asset/resource"
+        use: "file-loader"
       }
     ]
   },

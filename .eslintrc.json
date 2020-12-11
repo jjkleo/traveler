@@ -1,15 +1,23 @@
 {
+  "root": true,
   "env": {
     "browser": true,
     "node": true
   },
-  "extends": ["eslint:recommended", "plugin:prettier/recommended", "plugin:vue/essential"],
+  "extends": [
+    "eslint:recommended",
+    "plugin:vue/recommended",
+    "plugin:prettier/recommended",
+    "prettier/vue"
+  ],
+  "plugins": ["vue", "prettier"],
+  "parser": "vue-eslint-parser",
   "parserOptions": {
+    "parser": "babel-eslint",
     "ecmaVersion": 12,
     "sourceType": "module"
   },
-  "plugins": ["vue", "prettier"],
   "rules": {
-    "prettier/prettier": "error"
+    // "prettier/prettier": "error"
   }
 }
