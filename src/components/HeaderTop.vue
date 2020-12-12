@@ -39,6 +39,7 @@ export default {
   },
   methods: {
     toHome() {
+      // 跳转到主页
       if (this.$route.path != "/home") {
         this.$router.push("/home");
       }
@@ -52,6 +53,7 @@ header {
   width: 100%;
   height: 50px;
   background-color: #ffffff;
+  box-shadow: 0 1px 3px rgba(18, 18, 18, 0.1);
 }
 .header-container {
   width: 1050px;
